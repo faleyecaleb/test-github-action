@@ -36,10 +36,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # 6. (Optional) Build step for production artifacts
-      - name: Build
-        if: exists('package.json') && contains(fromJson('["build"]'), github.event_name)
-        run: npm run build
+      # # 6. (Optional) Build step for production artifacts
+      # - name: Build
+      #   if: exists('package.json') && contains(fromJson('["build"]'), github.event_name)
+      #   run: npm run build
 
   # Optional: Deploy job can go here, e.g. to Heroku/Vercel/AWS,
   # triggered only on pushes to main.
